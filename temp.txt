@@ -1,0 +1,25 @@
+
+You want: multiple items should be in same record of orders table
+
+orderid INTEGER
+products list of lists (productid, product_name, product_quantity)
+userid
+
+Column VARCHAR()
+
+[[1, carrot],  [2, bananas], [2, apple], [5, cucmber], [4385, milk], ... 400 items]
+
+orderid user_id product_id product_name product_quantity 
+1       2001    101        milk         1
+                102        beans        2
+                103        bread        2
+
+
+orderid user_id product_id product_name product_quantity trans_id
+1       2001    101        milk         1                 101
+2       2001    102        beans        2                 101
+3       2001    103        bread        2                 101
+
+.. infinite rows, but not infinite columns
+
+GROUP BY trans_id CONCACT(Pordict name..)

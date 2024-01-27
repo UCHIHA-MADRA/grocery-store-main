@@ -1,0 +1,18 @@
+{% extends 'base2.html' %}
+
+{% block title %} Delete Product {% endblock %}
+
+{% block content %}
+    {% include 'lsidebar.html' %}
+    <div class = "rsidebar">
+        <form action = "/inventory/deleteproduct" method = "post">
+            <h2>Delete Category</h2><br>
+            <select name = "prodid" required>
+                {% for product in products %}
+                    <option value = "{{product[0]}}">{{product[1]}}</option>
+                {% endfor %}
+            </select><br>
+            <button>Delete Category</button>
+        </form>
+    </div>
+{% endblock %}

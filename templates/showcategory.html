@@ -1,0 +1,13 @@
+{% extends 'base2.html' %}
+
+{% block title %} Show Category {% endblock %}
+
+{% block content %}
+    {% include 'lsidebar.html' %}
+    <div class = "rsidebar">
+        <h2>Show Categories</h2><br>
+        {% for category in categories %}
+            {{category[1]}}<br>
+        {% endfor %}
+    </div>
+{% endblock %}

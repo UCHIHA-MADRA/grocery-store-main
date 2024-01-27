@@ -1,0 +1,14 @@
+{% extends 'base2.html' %}
+
+{% block title %} Create Category {% endblock %}
+
+{% block content %}
+    {% include 'lsidebar.html' %}
+    <div class = "rsidebar">
+        <form action = "/category/create" method = "post">
+            <h2>Create Category</h2><br>
+            <input type = "text" name = "category" placeholder = "Category Name" /><br>
+            <button>Create Category</button>
+        </form>
+    </div>
+{% endblock %}

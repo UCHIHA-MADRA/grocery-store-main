@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+
+{% block title %} Order Products {% endblock %}
+
+{% block content %}
+    <div style = 'padding: 50px 100px; width: calc(100% - 200px);'>
+        <h2>Order Products</h2><br>
+        <form action = '/orderproducts' method = 'post'>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                </tr>
+            {% for product in products %}
+                <tr>
+                    <td><input type = 'checkbox' name = 'prodid' value = '{{product[0]}}'></input></td>
+                    <td>{{product[1]}}</td>
+                    <td>{{product[2]}}</td>
+                    <td>{{product[3]}}</td>
+                </tr>
+            {% endfor %}
+            </table><br><br>
+            <button>Add to Cart</button>
+        </form>
+    </div>
+
+{% endblock %}

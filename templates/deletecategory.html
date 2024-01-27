@@ -1,0 +1,18 @@
+{% extends 'base2.html' %}
+
+{% block title %} Delete Category {% endblock %}
+
+{% block content %}
+    {% include 'lsidebar.html' %}
+    <div class = "rsidebar">
+        <form action = "/category/delete" method = "post">
+            <h2>Delete Category</h2><br>
+            <select name = "catid" required>
+                {% for category in categories %}
+                    <option value = "{{category[0]}}">{{category[1]}}</option>
+                {% endfor %}
+            </select><br>
+            <button>Delete Category</button>
+        </form>
+    </div>
+{% endblock %}

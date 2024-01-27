@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    text-underline-offset: 3px;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 25px;
+    line-height: 60px;
+    float:left;
+}
+
+nav {
+    background-color: #0069ff;
+    display: inline-block;
+    width: calc(100% - 200px);
+    padding: 0px 100px;
+    margin: 0px;
+    color: white;
+}
+
+.navlinks {
+    float: right;
+    line-height: 60px;
+}
+
+.navlinks a {
+    margin: 0px;
+    margin-left: 30px;
+    color: white;
+}
+
+.container {
+    text-align:left;
+    width: 100%;
+    padding: 0px;
+    margin-top:-5px;
+}
+
+input {
+    width: 228px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+select {
+    width: 250px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+button {
+    width: 250px;
+    padding: 10px 10px;
+    border: 1px solid #0069ff;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #0069ff;
+    color: white;
+}
+
+.blink {
+    color: #0069ff;
+    text-decoration: underline;
+}
+
+.lsidebar {
+    width: calc(30% - 101px);
+    padding-top:50px;
+    padding-left: 100px;
+    height: calc(100% - 50px);
+    float:left;
+    border-right: 1px solid black;
+}
+
+.rsidebar {
+    width: calc(70% - 50px);
+    padding-top: 50px;
+    padding-left: 50px;
+    float:right;
+}
+
+.lsidebar button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px sold black;
+    border-radius: 0px;
+    color:black;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.lsidebar button:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+td, th {
+    padding: 10px 0px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 20px;
+}

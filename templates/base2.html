@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel = "stylesheet" href = "{{ url_for('static', filename= 'css/style.css') }}">
+
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <nav>
+        <div class="logo">Grocery Store</div>
+        <div class = 'navlinks'>
+            <a href="{{ url_for('home')}}">Home</a>
+            <a href="{{ url_for('category')}}">Inventory</a> 
+            <a href="{{ url_for('home')}}">Profile</a> 
+            <a href="{{ url_for('viewcart')}}">View Cart</a> 
+            <a href="{{ url_for('logout')}}">Logout</a>  
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

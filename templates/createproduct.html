@@ -1,0 +1,20 @@
+{% extends 'base2.html' %}
+
+{% block title %} Create Category {% endblock %}
+
+{% block content %}
+    {% include 'lsidebar.html' %}
+    <div class = "rsidebar">
+        <form action = "/inventory/createproduct" method = "post">
+            <h2>Create Product</h2><br>
+            <select name = "catid" required>
+            {% for category in categories %}
+                <option value = "{{category[0]}}">{{category[1]}}</option>
+            {% endfor %}
+            </select><br>
+            <input type = "text" name = "productname" placeholder = "Product Name" required/><br>
+            <input type = "number" name = "quantity" placeholder = "Quantity" required/><br>
+            <button>Create Product</button>
+        </form>
+    </div>
+{% endblock %}
